@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tom is Coming</title>
+    <title>Tomaloy: Create Tom</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -21,7 +21,7 @@
        </div>
     </header>
 
-    <section id="view" class="">
+    <section id="tom" class="">
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
 
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -29,14 +29,14 @@
               <h2 class="mt-2 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">Create a Tom</h2>
             </div>
 
-            <ul>
-                @foreach($errors->all() as $error){
-                    <li>{{ $erro }}r</li>
-                }
-                @endforeach
-            </ul>
-
             <div class="mt-10 sm:mx-auto w-1/2">
+
+                <ul class="text-red-500 font-medium text-md">
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+
               <form class="space-y-6" action="{{ url('toms') }}" method="POST">
                 @csrf
 
@@ -60,15 +60,15 @@
                       <select id="room" name="room" type="room" autocomplete="room" required class="block w-full h-12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg sm:leading-6 px-3">
                         <option value="0">Select a Room</option>
                         <option value="1" {{ old('room') == 1 ? 'selected' : '' }}>Red Aloy</option>
-                        <option value="2" {{ old('room') == 2 ? 'selected' : '' }}>Green Aloy</option>
-                        <option value="1" {{ old('room') == 3 ? 'selected' : '' }}>Yellow Aloy</option>
+                        <option value="2" {{ old('room') == 2 ? 'selected' : '' }}>Yellow Aloy</option>
+                        <option value="3" {{ old('room') == 3 ? 'selected' : '' }}>Pink Aloy</option>
                       </select>
                     </div>
                   </div>
 
 
                 <div>
-                  <input type="submit" value="Add Tom" class="uppercase flex w-full h-12 justify-center rounded-md bg-indigo-600 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  <input type="submit" value="Meew" class="uppercase flex w-full h-12 justify-center rounded-md bg-indigo-600 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 </div>
               </form>
             </div>
