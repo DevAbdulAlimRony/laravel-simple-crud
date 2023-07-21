@@ -23,7 +23,7 @@ class TomController extends Controller
      */
     public function create()
     {
-        //
+        return View::make('toms.create');
     }
 
     /**
