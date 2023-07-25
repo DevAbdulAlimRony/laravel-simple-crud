@@ -106,5 +106,6 @@ class TomController extends Controller
         $tom->delete();
 
         Session::flash('message', "Tom is deleted successfully");
+        return redirect('toms');
     }
 }

@@ -22,11 +22,11 @@
     </header>
 
     <section id="tom" class="mt-20">
-            @if(Session::has('message'))
-                <p class="text-sm text-red">{{ Session::get('message') }}</p>
-            @endif
         <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
             <h2 class="py-5 text-center font-bold text-3xl uppercase">All the Toms</h2>
+            @if(Session::has('message'))
+                <p class="text-md text-red-500 text-center my-2">{{ Session::get('message') }}</p>
+            @endif
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
               <thead class="bg-indigo-50">
                 <tr class="text-lg text-center font-bold text-gray-600">
